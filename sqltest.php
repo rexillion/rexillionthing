@@ -40,8 +40,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-    echo "<br> username : " . $username;
-    echo "<br> email : " . $email;    
+    echo "<br> username : <h3>" . $username . "</h3>";
+    echo "<br> email : <h3>" . $email . "</h3>";    
 
 
 $stmt->close();
