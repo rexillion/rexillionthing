@@ -1,9 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "usermaker";
-$password = "securepassword";
-$dbname = "usernames_1";
-
+include'config.php';
 /*
 username = "bob"
 password = "bobknob"
