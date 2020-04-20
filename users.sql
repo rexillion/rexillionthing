@@ -37,20 +37,6 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `password`, `email`) VALUES
-(74, 'boboo', 'momooo', 'rexillion0@gmail.com'),
-(75, 'boboo', 'sha1(momooo)', 'rexillion0@gmail.com'),
-(76, 'boboonas', 'sha1(btty)', 'rexillion0@gmail.com'),
-(77, 'boboonas', 'sha1(hfghfhgf)', 'rexillion0@gmail.com'),
-(78, 'boboonas', 'hfghfhgf', 'rexillion0@gmail.com'),
-(79, 'boboonas', 'fhgfhfg', 'rexillion0@gmail.com'),
-(80, 'boboonas', 'fhgfhfg', 'rexillion0@gmail.com'),
-(81, 'boboonas', 'fhgfhfg', 'rexillion0@gmail.com'),
-(82, 'boboonas', 'dfdfdg', 'rexillion0@gmail.com'),
-(83, 'boboonas', 'dfdfdg', 'rexillion0@gmail.com'),
-(84, 'boboonas', 'dfdfdg', 'rexillion0@gmail.com'),
-(85, 'Jhgg', 'hhj', 'jj@haj.did'),
-(86, 'someone', 'other', 'dimitris.hargitt@outlook.com');
 
 --
 -- Indexes for dumped tables
