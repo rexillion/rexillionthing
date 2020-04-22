@@ -1,5 +1,6 @@
 <?php
 include'config.php';
+
 /*
 username = "bob"
 password = "bobknob"
@@ -25,9 +26,16 @@ $stmt->execute();
 */
 $username = $conn->real_escape_string($_REQUEST['username']);
 $password = $conn->real_escape_string($_REQUEST['psw']);
-$pswr = sha1($password);
+$pswr = sha1'$password';
 $email = $conn->real_escape_string($_REQUEST['email']);
 
+$result = $conn->query("SELECT * FROM users WHERE username='$username'") or die($conn->error());
+if ( $result->num_rows > 0 ) {
+    echo"<br><h3>username already exists!</h3>";
+    $stmt->close();
+    $conn->close();
+    die;
+} else {
 $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$pswr', '$email')";
 
 
@@ -36,9 +44,10 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-    echo "<br> username : <h3>" . $username . "</h3>";
-    echo "<br> email : <h3>" . $email . "</h3>";    
-
+    echo "<br> username : <h3>" . $username ."</h3>";
+    echo "<br> email : <h3>" . $email ."</h3>"; 
+    mail($email, 'Account Verification from rexillion.com','somestuff...');   
+}
 
 $stmt->close();
 $conn->close();
