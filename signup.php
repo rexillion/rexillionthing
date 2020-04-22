@@ -26,7 +26,7 @@ $stmt->execute();
 */
 $username = $conn->real_escape_string($_REQUEST['username']);
 $password = $conn->real_escape_string($_REQUEST['psw']);
-$pswr = sha1'$password';
+$pass = sha1($password);
 $email = $conn->real_escape_string($_REQUEST['email']);
 
 $result = $conn->query("SELECT * FROM users WHERE username='$username'") or die($conn->error());
