@@ -25,10 +25,10 @@ $stmt->execute();
 */
 $username = $conn->real_escape_string($_REQUEST['username']);
 $password = $conn->real_escape_string($_REQUEST['psw']);
-$pswr = 'sha1($password)';
+$pswr = sha1($password);
 $email = $conn->real_escape_string($_REQUEST['email']);
 
-$sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
+$sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$pswr', '$email')";
 
 
 if ($conn->query($sql) === TRUE) {
