@@ -25,7 +25,7 @@ if ( $result->num_rows > 0 ) {
     die;
 } else {
         if ( $password == $password2 ) {
-$sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$pswr', '$email')";
+$sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$pass', '$email')";
 
 
 if ($conn->query($sql) === TRUE) {
