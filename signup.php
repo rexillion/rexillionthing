@@ -35,7 +35,7 @@ if ($conn->query($sql) === TRUE) {
 }
     echo "<br> username : <h3>" . $username ."</h3>";
     echo "<br> email : <h3>" . $email ."</h3>"; 
-    mail($email, 'Account Verification from rexillion.com','somestuff...');   
+    mail($email, 'Account Verification from rexillion.com','did you create an account if not go change your password!!!');   
 } else {
     echo"<h1>Passwords don't match!</h1>";
 }
