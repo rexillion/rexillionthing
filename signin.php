@@ -22,8 +22,8 @@ $user = $result->fetch_assoc();
 
 $pass = $password;
 
-if ( $pass == $user['password'] ) {
-    echo"<h1>welcome user ".$username."! Your email is ".$user['email']."</h1>";
+if ( $pass == $user['pass'] ) {
+    echo"<h1>welcome ".$username."! Your email is ".$user['mail']."</h1>";
 } else {
     echo"<h1>Wrong Password!</h1>";
 }
