@@ -14,7 +14,7 @@ echo "Connected successfully ";
 $username = $conn->real_escape_string($_REQUEST['username']);
 $password = $conn->real_escape_string($_REQUEST['psw']);
 $password2 = $conn->real_escape_string($_REQUEST['psw-repeat']);
-$pass = sha1($password);
+$pass = $password;
 $email = $conn->real_escape_string($_REQUEST['email']);
 
 $result = $conn->query("SELECT * FROM usern WHERE name='$username'") or die($conn->error());
